@@ -27,6 +27,7 @@ test: scroll ptty
 
 clean:
 	rm -f scroll ptty
+	rm config.h
 
 distclean: clean
 	rm -f config.h scroll-$(VERSION).tar.gz
