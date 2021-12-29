@@ -8,9 +8,13 @@
 
 struct rule rules[] = {
 	/* sequence     event        lines */
-	{"\033[5;2~",   SCROLL_UP,   -3},       /* [Shift] + [PageUP] */
-	{"\033[6;2~",   SCROLL_DOWN, -3},       /* [Shift] + [PageDown] */
+	{"\033[5;2~",   SCROLL_UP,   -2},       /* [Shift] + [PageUP] */
+	{"\033[6;2~",   SCROLL_DOWN, -2},       /* [Shift] + [PageDown] */
 	/* mouse binding shadows ^E and ^Y, so it's disabled by default */
-	//{"\031",        SCROLL_UP,    1},       /* mouse wheel up */
-	//{"\005",        SCROLL_DOWN,  1},       /* mouse wheel Down */
+	{"\031",        SCROLL_UP,   -4},       /* mouse wheel up */
+	{"\005",        SCROLL_DOWN, -4},       /* mouse wheel Down */
+	{"k",         SCROLL_UP,    1},
+	{"j",         SCROLL_DOWN,  1},
+	{"u",         SCROLL_UP,   -4},
+	{"d",         SCROLL_DOWN, -4},
 };
